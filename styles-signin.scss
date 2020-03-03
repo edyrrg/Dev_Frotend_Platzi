@@ -1,0 +1,70 @@
+@use '_base';
+@use 'styles-component-Boxs';
+//colores de la pagina signin
+$blanco: white;
+$verdecito: #21c08b;
+$violeta: #ab88ff;
+$fondo_container: rgba(255, 255, 255, 0.1);
+.signin {
+  background: linear-gradient($verdecito, $violeta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 30px;
+  min-height: calc(100vh - 200px);
+}
+
+.signin__container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: $fondo_container;
+  border: $blanco solid 2px;
+  border-radius: 40px;
+  color: $blanco;
+  padding: 60px 68px 40px;
+  min-height: 700px;
+  width: 300px;
+  a {
+    color: $blanco;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.signin__container--form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signin__container--social-media > div {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.signin__container--social-media > div > img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .signin__container {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    width: 100%;
+  }
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
